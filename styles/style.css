@@ -1,0 +1,161 @@
+@import url('https://fontlibrary.org//face/minecraft');
+
+:root {
+    --primary-color: #000000;
+    --secondary-color: #9bc3c4;
+    --tertiary-color: #76d4b0;
+    --background-color: #f4f4f4;
+    --text-color: #333333;
+    --font-minecraft: 'Minecraft';
+    --font-size-base: 16px;
+    --spacing-unit: 8px;
+    --border-radius: 4px;
+    --transition-duration: 0.3s;
+}
+
+body {
+    font-family: var(--font-minecraft), sans-serif;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: calc(2 * var(--spacing-unit));
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+main {
+    padding: calc(2 * var(--spacing-unit));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(2 * var(--spacing-unit));
+}
+
+#timeline-container {
+    width: 80%;
+    margin-top: calc(2 * var(--spacing-unit));
+    overflow-x: auto;
+}
+
+#timeline {
+    display: flex;
+    position: relative;
+    width: fit-content;
+    padding: calc(2 * var(--spacing-unit)) 0;
+    align-items: center;
+}
+
+.memory-point {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 calc(2.5 * var(--spacing-unit));
+    position: relative;
+}
+
+.point {
+    width: calc(2.5 * var(--spacing-unit));
+    height: calc(2.5 * var(--spacing-unit));
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    z-index: 1;
+    transition: transform var(--transition-duration), background-color var(--transition-duration);
+}
+
+.point:hover {
+    transform: scale(1.2);
+    background-color: var(--tertiary-color);
+}
+
+.label {
+    margin-top: calc(0.5 * var(--spacing-unit));
+    font-size: 0.9em;
+    text-align: center;
+    color: var(--text-color);
+}
+
+#timeline::before {
+    content: '';
+    position: absolute;
+    top: calc(1.25 * var(--spacing-unit));
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--secondary-color);
+    z-index: 0;
+}
+
+#memory-details {
+    background-color: #ffffff;
+    padding: calc(2 * var(--spacing-unit));
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 calc(1.25 * var(--spacing-unit)) rgba(0, 0, 0, 0.1);
+    margin-top: calc(2 * var(--spacing-unit));
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    width: 400px;
+}
+
+.hidden {
+    display: none;
+}
+
+#memory-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: calc(1.25 * var(--spacing-unit));
+    border-radius: calc(0.625 * var(--spacing-unit));
+    box-shadow: 0 0 calc(0.625 * var(--spacing-unit)) rgba(0, 0, 0, 0.1);
+}
+
+#close-details {
+    padding: calc(1.25 * var(--spacing-unit)) calc(2.5 * var(--spacing-unit));
+    background-color: var(--text-color);
+    color: #ffffff;
+    border: none;
+    border-radius: calc(0.625 * var(--spacing-unit));
+    cursor: pointer;
+    margin-top: calc(1.25 * var(--spacing-unit));
+    transition: background-color var(--transition-duration);
+}
+
+#close-details:hover {
+    background-color: var(--primary-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    text-align: center;
+    padding: calc(2.5 * var(--spacing-unit));
+    font-size: 0.875em;
+    border-top: 2px solid var(--secondary-color); 
+}
+
+footer a {
+    color: var(--tertiary-color);
+    text-decoration: none;
+    font-weight: bold; 
+    transition: color var(--transition-duration); 
+}
+
+footer a:hover {
+    color: var(--secondary-color); 
+    text-decoration: underline;
+}
+
+footer p {
+    margin: calc(0.625 * var(--spacing-unit)) 0;
+    line-height: 1.5; 
+}

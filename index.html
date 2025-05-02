@@ -3,31 +3,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viaje Virtal de reecuerdos</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <header>
-        <h1>Bienvenido a Viaje Virtual de Recuerdos</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Inicio</a></li>
-                <li><a href="#about">Sobre Nosotros</a></li>
-                <li><a href="#services">Servicios</a></li>
-                <li><a href="#contact">Contacto</a></li>
-            </ul>
-        </nav>
+        <h1 class="tittle">Bienvenido a Viaje Virtual de Recuerdos</h1>
     </header>
     <main>
         <section>
-
-            <h2 id="home">Inicio</h2>
-            <p>Bienvenido a nuestro sitio web, donde te ofrecemos un viaje virtual a través de tus recuerdos más preciados.</p>
+            <main>
+                <section id="timeline-container">
+                    <div id="timeline">
+                        <div class="memory-point" data-fecha="Mayo 1985" data-descripcion="El día que naciste, madre bella." data-imagen="assets/imagenes/">
+                            <div class="point"></div>
+                            <div class="label">Mayo 1985</div>
+                        </div>
+            
+                        <div class="memory-point" data-fecha="Diciembre 2005" data-descripcion="El primer año en el que te ." data-imagen="assets/imagenes/">
+                            <div class="point"></div>
+                            <div class="label">Enero 2005</div>
+                        </div>
+            
+                    </div>
+                </section>
+            
+                <div id="memory-details" class="hidden">
+                    <button id="close-details">Cerrar</button>
+                    <img id="memory-image" src="" alt="">
+                    <p id="memory-description"></p>
+                </div>
+            </main>
         </section>
     </main>
     <footer>
         <p>&copy; 2023 Viaje Virtual de Recuerdos. Todos los derechos reservados.</p>
-        <p>Desarrollado por [Tu Nombre]</p>
-        <p>Contacto: [Tu Correo Electrónico]</p>
-        <p>Redes Sociales: [Tus Redes Sociales]</p>
+        <p>Desarrollado por Juan Segura</p>
+        <p>Contacto: <a href="sebasthsegura05@gmail.com">sebasthsegura05@gmail.com</a> </p>
+        <p>Redes Sociales: <a href="https://github.com/SebasthSegura/">github</a></p>
     </footer>
 </body>
+<script src="funtions/timeIn.js"></script>
 </html>
