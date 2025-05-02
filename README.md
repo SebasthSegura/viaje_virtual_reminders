@@ -23,15 +23,19 @@ Este proyecto es un regalo interactivo en forma de página web, diseñado especi
 
 ## Estructura del Proyecto
 
-├── index.html         
+├── index.html  
 
-├── styles.css         
+│   ├── style/ 
 
-├── script.js          
+│   │   └── styles.css 
+
+│   ├── funtions/
+
+│   │   └── timeIn.js          
 
 ├── assets/            
 
-│   ├── imagenes/      
+│   ├── imag/      
 
 │   │   ├── recuerdo1.jpg
 
