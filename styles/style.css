@@ -161,12 +161,12 @@ footer p {
 }
 
 .audio {
-    display: block; /* Ensures it takes up its own line */
-    margin: calc(2 * var(--spacing-unit)) auto; /* Center the audio player with spacing */
-    width: 80%; /* Set the width to 80% of the container */
-    max-width: 600px; /* Limit the maximum width */
-    background-color: var(--secondary-color); /* Background color for the audio player */
-    border: 2px solid var(--primary-color); /* Add a border for better visibility */
-    border-radius: var(--border-radius); /* Rounded corners */
-    box-shadow: 0 0 calc(1 * var(--spacing-unit)) rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    display: block; 
+    margin: calc(2 * var(--spacing-unit)) auto; 
+    width: 80%; 
+    max-width: 600px; 
+    background-color: var(--secondary-color); 
+    border: 2px solid var(--primary-color); 
+    border-radius: var(--border-radius); 
+    box-shadow: 0 0 calc(1 * var(--spacing-unit)) rgba(0, 0, 0, 0.2); 
 }
